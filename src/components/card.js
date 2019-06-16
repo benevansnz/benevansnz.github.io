@@ -1,66 +1,46 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Image from "./image"
-import Media from 'react-media'
 
 const Card = ({ 
   linkDestination, 
   cardTitle, 
   cardDescription, 
-  desktopFlex 
+  ctaText 
 }) => (
-  <Media query={{ minWidth: 768 }}>
-    { matches => matches ? (
-      <card style={{
-        flex: desktopFlex,
-        border: '1px solid black'
-      }}>
-        <Link to={ linkDestination }>
-          <Image />
-        </Link>
-        <Link 
-          to={ linkDestination }
-          style={{
-            color: `#003e6b`,
-            textDecoration: `none`,
-          }}
-        >
-          <h3 style={{ display: 'inline-block'}}>{ cardTitle }</h3>
-        </Link>
-        <p>{ cardDescription }</p>
-      </card>
-    ) : (
-      <card>
-        <Link to={ linkDestination }>
-          <Image />
-        </Link>
-        <Link 
-          to={ linkDestination }
-          style={{
-            color: `#003e6b`,
-            textDecoration: `none`,
-          }}
-        >
-          <h3 style={{ display: 'inline-block'}}>{ cardTitle }</h3>
-        </Link>
-        <p>{ cardDescription }</p>
-      </card>
-    )}
-  </Media>
+<card class="card">
+  <a 
+    class="card__link" 
+    href={ linkDestination }
+    style={{
+      color: `#003e6b`,
+      textDecoration: `none`,
+    }}
+  >
+    <h3 
+      class="card__title" 
+      style={{ display: 'inline-block'}}
+    >{ cardTitle }</h3>
+  </a>
+  <p class="card__description">{ cardDescription }</p>
+  <a href={ linkDestination } target="_blank" rel="noopener noreferrer">
+    <button class="card__cta">
+      { ctaText }
+    </button>
+  </a>
+</card>
 )
 
 Card.propTypes = {
   linkDestination: PropTypes.string,
   cardDescription: PropTypes.string,
   cardTitle: PropTypes.string.isRequired,
-  desktopFlex: PropTypes.string
+  ctaText: PropTypes.string
 }
 
 Card.defaultProps = {
   linkDestination: "/",
-  cardDescription: "Lorem ipsum dolor blah blah blah blah. Lorem ipsum dolor blah blah blah blah.",
-  desktopFlex: '0 0 100%'
+  cardDescription: "",
+  ctaText: "read more"
 }
 
 export default Card
