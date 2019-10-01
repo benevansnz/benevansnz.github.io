@@ -1,0 +1,3 @@
+function themeChange() {
+  alert('nice');
+}
