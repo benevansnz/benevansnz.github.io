@@ -1,0 +1,38 @@
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.info {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.info__image {
+  flex-basis: 100%;
+  border: 10px solid $dark-liver;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  margin: 0 30px;
+
+  @include mq($layout-breakpoint) {
+    
+    flex: 0 0 200px;
+  }
+}
+
+.info__content {
+  text-align: center;
+
+  @include mq($layout-breakpoint) {
+    text-align: left;
+  }
+}

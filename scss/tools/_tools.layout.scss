@@ -1,0 +1,41 @@
+@mixin mq($min, $max: 0) {
+  @if $min == 0 {
+    @media only screen and (max-width: #{$max - 1}) {
+      @content;
+    }
+  } @else if $max == 0 {
+    @media only screen and (min-width: #{$min}) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: #{$min}) and (max-width: #{$max - 1}) {
+      @content;
+    }
+  }
+}
+
+@mixin ie11 {
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

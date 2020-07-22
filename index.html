@@ -4,39 +4,34 @@
     <meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Ben Evans - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="compiled/style.css">
     <script src="index.js"></script>
   </head>
   <body>
-    <noscript>This site works best with JavaScript enabled.</noscript>
     <main>
-      <section class="content-wrapper">
-        <div class="intro">
-          <h1>Hello!</h1>
-          <h2>I'm Ben Evans, a web developer</h2>
-          <p>Check out the links below if you want to know more about me.</p>
-        </div>
-        <div class="links">
-          <a href="https://github.com/benevansnz/">Github</a>
-          <a href="https://codepen.io/benevansnz/">Codepen</a>
-          <a href="http://twitter.com/benevansnz/">Twitter</a>
-          <a href="https://www.linkedin.com/in/benevansnz/">LinkedIn</a>
-        </div>
-        <div class="ghost" id="ghost" onclick="toggleModifiers()">
-          <p class="ghost__message">If you want to play around with the site, then click me!<span class="ghost__message-tail"></span></p>
-          <span class="ghost__eye ghost__eye--left"></span>
-          <span class="ghost__eye ghost__eye--right"></span>
-          <span class="ghost__tail ghost__tail--one"></span>
-          <span class="ghost__tail ghost__tail--two"></span>
+      <section class="section--foreword">
+        <div class="content-wrapper">
+          <div class="info">
+            <div class="info__image">
+              <img src="assets/ben.jpg" alt="A picture of Ben"/>
+            </div>
+            <div class="info__content">
+              <h1>Ben Evans</h1>
+              <h2>Front-end Developer</h2>
+            </div>
+          </div>
         </div>
       </section>
-      <div class="site-modifiers" id="site-modifiers">
-        <h2>Site Modifiers</h2>
-        <h3>More to come in the future!</h3>
-        <button onclick="themeChange()">A change of colours please!</button>
-        <button onclick="toggleModifiers()">Hide modifiers</button>
-      </div>
     </main>
+    <footer>
+      <div class="content-wrapper">
+        <a href="https://github.com/benevansnz/">Github</a>
+        <a href="https://codepen.io/benevansnz/">Codepen</a>
+        <a href="http://twitter.com/benevansnz/">Twitter</a>
+        <a href="https://www.linkedin.com/in/benevansnz/">LinkedIn</a>
+      </div>
+    </footer>
   </body>
 </html>
